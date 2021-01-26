@@ -13,6 +13,8 @@ export default function Landing() {
             </div>
 
             <div className="right-wrapper">
+                <span className='glass'></span>
+                <span className='glass-circle'></span>
                 <img src={landingGfx} class='landing-gfx'/>
             </div>
         </div>
