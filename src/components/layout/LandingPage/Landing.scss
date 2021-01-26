@@ -1,0 +1,48 @@
+.landing-header-text {
+    margin-left: 10%;
+}
+
+.logo-text {
+    margin-top: 50%;
+    margin-left: 10%;
+    display: flex;
+    align-self: center;
+    width: 30rem;
+}
+
+.landing-page {
+    display: flex;
+}
+
+.text-wrapper {
+    height: 100vh;
+    width: 50vw;
+    position: relative;
+}
+
+.right-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 50vw;
+}
+
+.landing-gfx {
+    width: 40rem;
+    height: 40rem;
+}
+
+.landing-signup-btn {
+    font-weight: 500;
+    background: none;
+    border: 1px solid black;
+    padding: 10px 45px;
+    border-radius: 20px;
+    margin-left: 10%;
+}
+
+.landing-signup-btn:hover {
+    background-color: black;
+    color: white;
+}
