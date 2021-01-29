@@ -17,6 +17,7 @@ export default function Landing() {
                 <span className='glass-circle'></span> */}
                 <img src={landingGfx} class='landing-gfx'/>
             </div>
+
         </div>
     )
 }
