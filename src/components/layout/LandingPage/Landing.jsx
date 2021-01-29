@@ -1,7 +1,7 @@
 import React from 'react';
 import './Landing.scss';
 import logoText from '../../../img/logo/logo-text.svg';
-import landingGfx from '../../../img/icons/landingIcon.svg';
+import landingGfx from '../../../img/icons/landing-page-img.svg';
 
 export default function Landing() {
     return (
@@ -13,8 +13,8 @@ export default function Landing() {
             </div>
 
             <div className="right-wrapper">
-                <span className='glass'></span>
-                <span className='glass-circle'></span>
+                {/* <span className='glass'></span>
+                <span className='glass-circle'></span> */}
                 <img src={landingGfx} class='landing-gfx'/>
             </div>
         </div>
