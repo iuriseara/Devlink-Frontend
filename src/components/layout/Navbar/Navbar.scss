@@ -8,6 +8,10 @@
         justify-content: space-between;
     }
 
+    .nav-logo-txt {
+        display: none;
+    }
+
     .menu-icon {
         margin-right: 5vw;
         width: 35px;
@@ -36,6 +40,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    .nav-logo-txt {
+        display: none;
     }
 
     .menu-icon {
@@ -71,6 +79,10 @@
         margin-left: 4vw;
         width: 35px;
         height: 35px;
+    }
+
+    .nav-logo-txt {
+        display: none;
     }
     
     .nav-list {
@@ -148,6 +160,19 @@
         margin-left: 4vw;
         width: 35px;
         height: 35px;
+    }
+
+    .logo-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-logo-txt {
+        margin-left: 10px;
+        display: flex;
+        align-self: center;
+        width: 100px;
+        height: 50px;
     }
     
     .nav-list {
