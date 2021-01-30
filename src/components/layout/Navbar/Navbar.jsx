@@ -1,18 +1,34 @@
-import React, { useState, Fragment } from 'react'
+import React, { Component, Fragment } from 'react'
 import './Navbar.scss';
 import logo from '../../../img/logo/logo-black.svg'
 import logoText from '../../../img/logo/logo-text.svg'
 import menuIcon from '../../../img/icons/menu.svg'
 import MobileNav from './MobileNav/MobileNav'
 
-export default function Navbar() {
 
-    const [open, setOpen] = useState(false)
+export default class Navbar extends Component {
 
-    return (
-        <Fragment>
-            <MobileNav open={open}/>
-            
+    state = {
+        isOpen: false
+    }
+
+    toggleCollapse = () => {
+        this.setState({ isOpen: !this.state.isOpen });
+    }
+
+
+    menuPopUp = () => {
+        if (this.state.isOpen === true) {
+            return (<MobileNav toggle={this.toggleCollapse}/>)
+        }
+    }
+
+
+    render() {
+        
+        return (
+            <Fragment>
+            {this.menuPopUp()}
             <nav className="navbar">
             <div className='logo-wrapper'>
                 <a href="#"><img className="nav-logo" src={logo}/></a>
@@ -22,10 +38,12 @@ export default function Navbar() {
                 <li><button className="login-btn">Login</button></li>
                 <li><button className="signup-btn">Sign Up</button></li>
             </ul>
-            <a href="#" className='menu-icon'><img className="menu-icon" onClick={() => setOpen(!open)} src={menuIcon}/></a>
+            <a href="#" className='menu-icon'><img className="menu-icon" onClick={this.toggleCollapse} src={menuIcon}/></a>
             </nav>
 
             
-        </Fragment>
-    )
+            </Fragment>
+        )
+    }
 }
+

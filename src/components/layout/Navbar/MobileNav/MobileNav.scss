@@ -3,10 +3,18 @@
         top: 0;
         width: 100vw;
         background-color: #2444f9;
-        height: 30vh;
+        height: 100vh;
         position: fixed;
         z-index: 12;
         transition: transform 0.3s ease-in-out;
+    }
+
+    .close-menu-icon {
+        position: fixed;
+        top: 2vh;
+        right: 5vw;
+        width: 30px;
+        height: 30px;
     }
 
     .mobile-nav-list {
@@ -15,14 +23,14 @@
         align-items: center;
         place-content: space-evenly;
         list-style-type: none;
-        font-size: 25px;
+        font-size: 5rem;
         text-align: center;
         color: white;
         margin: 0;
         padding: 0;
     }
 
-    a.login-menu-text, a.signup-menu-text {
+    a.login-menu-text, a.signup-menu-text, a.blog-menu-text, a.contact-menu-text {
         text-decoration: none;
         color: white;
     }
@@ -35,7 +43,7 @@
         top: 0;
         width: 100vw;
         background-color: #2444f9;
-        height: 30vh;
+        height: 100vh;
         position: fixed;
         z-index: 12;
         transition: transform 0.3s ease-in-out;
@@ -47,18 +55,25 @@
         align-items: center;
         place-content: space-evenly;
         list-style-type: none;
-        font-size: 25px;
+        font-size: 5rem;
         text-align: center;
         color: white;
         margin: 0;
         padding: 0;
     }
 
-    a.login-menu-text, a.signup-menu-text {
+    a.login-menu-text, a.signup-menu-text, a.blog-menu-text, a.contact-menu-text {
         text-decoration: none;
         color: white;
     }
 
+    .close-menu-icon {
+        position: fixed;
+        top: 2vh;
+        right: 5vw;
+        width: 30px;
+        height: 30px;
+    }
 
 }
 
