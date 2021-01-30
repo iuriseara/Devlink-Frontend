@@ -25,7 +25,7 @@ export default class Navbar extends Component {
 
 
     render() {
-        
+        console.log("CURRENT STATE",this.state.isOpen)
         return (
             <Fragment>
             {this.menuPopUp()}
