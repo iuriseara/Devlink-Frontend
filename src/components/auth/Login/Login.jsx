@@ -1,6 +1,7 @@
 import React from 'react'
 import './Login.scss'
 import logo from './../../../img/logo/logo-black.svg'
+import { Link } from 'react-router-dom'
 
 export default function Login() {
     return (
@@ -17,6 +18,10 @@ export default function Login() {
                     <input className="password-input" type="password" name="password" placeholder="Password"/><br/>
                 
                     <button type="submit" className="login-modal-btn">Login</button>
+                    
+                    <p className='login-text'>Don't have an account? 
+                        <Link to='/register' className="signup-text"><span> Sign Up</span></Link>
+                    </p>
                 </div>
             </div>
         </div>

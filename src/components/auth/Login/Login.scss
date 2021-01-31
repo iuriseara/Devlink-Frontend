@@ -46,7 +46,8 @@
         background-color: blue;
         color: white;
         border: none;
-        padding: 10px 50px;
+        font-size: 1rem;
+        padding: 15px 65px;
         font-weight: bold;
         border-radius: 30px;
         outline: none;
@@ -62,6 +63,38 @@
     .login-logo {
         width: 3rem;
         height: 3rem;
+    }
+
+    .login-text {
+        font-size: 1rem;
+        margin-top: 4rem;
+    }
+
+    .signup-text {
+        font-weight: bold;
+        display: inline-block;
+        position: relative;
+        color: #E91E63;
+        text-decoration: none;
+        margin-left: 5px;
+    }
+
+    .signup-text:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #E91E63;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .signup-text:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
 }
 
@@ -85,7 +118,7 @@
     .login-wrapper {
         display: grid;
         width: 55vw;
-        height: 55vh;
+        height: 60vh;
         place-content: center;
         background: rgba( 255, 255, 255, 0.35 );
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -115,7 +148,8 @@
         background-color: blue;
         color: white;
         border: none;
-        padding: 10px 50px;
+        font-size: 1rem;
+        padding: 15px 65px;
         font-weight: bold;
         border-radius: 30px;
         outline: none;
@@ -131,6 +165,38 @@
     .login-logo {
         width: 3rem;
         height: 3rem;
+    }
+
+    .login-text {
+        font-size: 1rem;
+        margin-top: 4rem;
+    }
+
+    .signup-text {
+        font-weight: bold;
+        display: inline-block;
+        position: relative;
+        color: #E91E63;
+        text-decoration: none;
+        margin-left: 5px;
+    }
+
+    .signup-text:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #E91E63;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .signup-text:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
 }
 
@@ -184,7 +250,8 @@
         background-color: blue;
         color: white;
         border: none;
-        padding: 10px 50px;
+        font-size: 1rem;
+        padding: 15px 65px;
         font-weight: bold;
         border-radius: 30px;
         outline: none;
@@ -201,6 +268,39 @@
         width: 3rem;
         height: 3rem;
     }
+
+    .login-text {
+        font-size: 1rem;
+        margin-top: 4rem;
+    }
+
+    .signup-text {
+        font-weight: bold;
+        display: inline-block;
+        position: relative;
+        color: #E91E63;
+        text-decoration: none;
+        margin-left: 5px;
+    }
+
+    .signup-text:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #E91E63;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .signup-text:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
 }
 
 
@@ -254,7 +354,8 @@
         background-color: blue;
         color: white;
         border: none;
-        padding: 10px 50px;
+        font-size: 1rem;
+        padding: 15px 65px;
         font-weight: bold;
         border-radius: 30px;
         outline: none;
@@ -270,6 +371,38 @@
     .login-logo {
         width: 3rem;
         height: 3rem;
+    }
+
+    .login-text {
+        font-size: 1rem;
+        margin-top: 4rem;
+    }
+
+    .signup-text {
+        font-weight: bold;
+        display: inline-block;
+        position: relative;
+        color: #E91E63;
+        text-decoration: none;
+        margin-left: 5px;
+    }
+
+    .signup-text:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #E91E63;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .signup-text:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
 }
 
@@ -324,7 +457,8 @@
         background-color: blue;
         color: white;
         border: none;
-        padding: 10px 50px;
+        font-size: 1rem;
+        padding: 15px 65px;
         font-weight: bold;
         border-radius: 30px;
         outline: none;
@@ -341,5 +475,40 @@
         width: 3rem;
         height: 3rem;
     }
+
+    .login-text {
+        font-size: 1rem;
+        margin-top: 4rem;
+    }
+
+
+    .signup-text {
+        font-weight: bold;
+        display: inline-block;
+        position: relative;
+        color: #E91E63;
+        text-decoration: none;
+        margin-left: 5px;
+    }
+
+    .signup-text:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #E91E63;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .signup-text:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    
 
 }

@@ -1,3 +1,19 @@
+@media only screen and (max-device-width: 568px) {
+    .register-wrapper {
+        margin-top: 2rem;
+        display: grid;
+        width: 90vw;
+        height: 82vh;
+        place-content: center;
+        background: rgba( 255, 255, 255, 0.35 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 15px;
+    }
+}
+
+
 @media only screen and (max-width: 600px) {
     .register-modal {
         background: transparent;
@@ -12,7 +28,7 @@
     .register-wrapper {
         display: grid;
         width: 90vw;
-        height: 90vh;
+        height: 80vh;
         place-content: center;
         background: rgba( 255, 255, 255, 0.35 );
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -42,7 +58,8 @@
         background-color: blue;
         color: white;
         border: none;
-        padding: 10px 50px;
+        font-size: 1rem;
+        padding: 15px 65px;
         font-weight: bold;
         border-radius: 30px;
         outline: none;
@@ -65,6 +82,11 @@
     .register-logo-title {
         text-align: center;
         font-size: 2rem;
+    }
+
+    .register-text {
+        font-size: 1rem;
+        margin-top: 4rem;
     }
 }
 
@@ -113,7 +135,8 @@
         background-color: blue;
         color: white;
         border: none;
-        padding: 10px 50px;
+        font-size: 1rem;
+        padding: 15px 65px;
         font-weight: bold;
         border-radius: 30px;
         outline: none;
@@ -136,6 +159,11 @@
     .register-logo-title {
         text-align: center;
         font-size: 3rem;
+    }
+
+    .register-text {
+        font-size: 1rem;
+        margin-top: 4rem;
     }
 }
 
@@ -183,7 +211,8 @@
         background-color: blue;
         color: white;
         border: none;
-        padding: 10px 50px;
+        font-size: 1rem;
+        padding: 15px 65px;
         font-weight: bold;
         border-radius: 30px;
         outline: none;
@@ -206,6 +235,11 @@
     .register-logo-title {
         text-align: center;
         font-size: 3rem;
+    }
+
+    .register-text {
+        font-size: 1rem;
+        margin-top: 2rem;
     }
 }
 
@@ -253,7 +287,8 @@
         background-color: blue;
         color: white;
         border: none;
-        padding: 10px 50px;
+        font-size: 1rem;
+        padding: 15px 65px;
         font-weight: bold;
         border-radius: 30px;
         outline: none;
@@ -276,6 +311,11 @@
     .register-logo-title {
         text-align: center;
         font-size: 3rem;
+    }
+
+    .register-text {
+        font-size: 1rem;
+        margin-top: 2rem;
     }
 }
 
@@ -324,7 +364,8 @@
         background-color: blue;
         color: white;
         border: none;
-        padding: 10px 50px;
+        font-size: 1rem;
+        padding: 15px 65px;
         font-weight: bold;
         border-radius: 30px;
         outline: none;
@@ -338,15 +379,48 @@
     }
 
     .register-logo {
-        width: 3rem;
+        width: 2rem;
         height: 3rem;
         display: grid;
         justify-self: center;
     }
 
     .register-logo-title {
+        margin-top: 1rem;
         text-align: center;
         font-size: 3rem;
+    }
+
+    .register-text {
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+
+    .signup-text {
+        font-weight: bold;
+        display: inline-block;
+        position: relative;
+        color: #E91E63;
+        text-decoration: none;
+        margin-left: 5px;
+    }
+
+    .signup-text:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #E91E63;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .signup-text:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
 
 }

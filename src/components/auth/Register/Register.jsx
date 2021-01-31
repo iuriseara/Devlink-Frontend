@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from './../../../img/logo/logo-black.svg'
 import './Register.scss'
 
@@ -23,6 +24,10 @@ export default function Register() {
                     <input type="password" name="password2" placeholder="Confirm Password" minLength="6" className="signup-password-input"/><br/>
                
                     <button type="submit" className="register-modal-btn">Register</button>
+
+                    <p className='register-text'>Already have an account? 
+                        <Link to='/login' className="signup-text"><span> Login</span></Link>
+                    </p>
                 </div>
            </div>
         </div>

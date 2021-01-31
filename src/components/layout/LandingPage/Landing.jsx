@@ -3,6 +3,7 @@ import './Landing.scss';
 import logoText from '../../../img/logo/logo-text.svg';
 import landingGfx from '../../../img/icons/landing-page-img.svg';
 import Modal from '../../auth/Login/Login'
+import { Link } from 'react-router-dom'
 
 
 export default function Landing() {
@@ -12,7 +13,7 @@ export default function Landing() {
             <div className="text-wrapper">
                 <img src={logoText} className="logo-text"/>
                 <h1 className='landing-header-text'>The First Social Media Platform built by Developers. For Developers.</h1>
-                <button className='landing-signup-btn'>Sign Up</button>
+                <Link to='/register'><button className='landing-signup-btn'>Sign Up</button></Link>
             </div>
 
             <div className="right-wrapper">
