@@ -1,26 +1,28 @@
 import React from 'react'
+import logo from './../../../img/logo/logo-black.svg'
+import './Register.scss'
+
 
 export default function Register() {
     return (
         <div className="register-modal">
            <div className="register-wrapper">
-                <h1>Register</h1>
+
+                <img src={logo} alt="logo" className="register-logo"/>
+
+                <h1 className="register-logo-title">Sign Up</h1>
                
                 <div className='register-form'>
-                    <label>Name</label><br/>
-                    <input type="text" name="username" placeholder="Name"/><br/>
+                   
+                    <input type="text" name="username" placeholder="Name" className="signup-name-input"/><br/>
+                  
+                    <input type="text" name="username" placeholder="Email" className="signup-email-input"/><br/>
+                  
+                    <input type="password" name="password" placeholder="Password" minLength="6" className="signup-password-input"/><br/>
                
-                    <label>Email</label><br/>
-                    <input type="text" name="username" placeholder="Email"/><br/>
+                    <input type="password" name="password2" placeholder="Confirm Password" minLength="6" className="signup-password-input"/><br/>
                
-               
-                    <label>Password</label><br/>
-                    <input type="password" name="password" placeholder="Password" minLength="6"/><br/>
-               
-                    <label>Confirm Password</label><br/>
-                    <input type="password" name="password2" placeholder="Confirm Password" minLength="6"/><br/>
-               
-                    <button type="submit" className="login-modal-btn">Login</button>
+                    <button type="submit" className="register-modal-btn">Register</button>
                 </div>
            </div>
         </div>

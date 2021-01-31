@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import { Link } from 'react-router-dom'
 import './Navbar.scss';
 import logo from '../../../img/logo/logo-black.svg'
 import logoText from '../../../img/logo/logo-text.svg'
@@ -31,12 +32,17 @@ export default class Navbar extends Component {
             {this.menuPopUp()}
             <nav className="navbar">
             <div className='logo-wrapper'>
-                <a href="#"><img className="nav-logo" src={logo}/></a>
-                <a href="#"><img className="nav-logo-txt" src={logoText}/></a>
+                <Link to='/'><img className="nav-logo" src={logo}/></Link>
+                <Link to='/'><img className="nav-logo-txt" src={logoText}/></Link>
             </div>
             <ul className="nav-list">
-                <li><button className="login-btn">Login</button></li>
-                <li><button className="signup-btn">Sign Up</button></li>
+                <Link to='/login'>
+                    <li><button className="login-btn">Login</button></li>
+                </Link>
+                
+                <Link to='/register'>
+                    <li><button className="signup-btn">Sign Up</button></li>
+                </Link>
             </ul>
             <a href="#" className='menu-icon'><img className="menu-icon" onClick={this.toggleCollapse} src={menuIcon}/></a>
             </nav>

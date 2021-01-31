@@ -1,5 +1,5 @@
 @media only screen and (max-width: 600px) {
-    .login-modal {
+    .register-modal {
         background: transparent;
         position: absolute;
         width: 100vw;
@@ -9,11 +9,78 @@
         align-content: center;
     }
 
-    .logo-title {
-        font-size: 3rem;
+    .register-wrapper {
+        display: grid;
+        width: 90vw;
+        height: 90vh;
+        place-content: center;
+        background: rgba( 255, 255, 255, 0.35 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 15px;
     }
 
-    .login-wrapper {
+    .signup-name-input, .signup-email-input, .signup-password-input {
+        width: 15rem;
+        height: 2.4rem;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+        border-radius: 20px;
+        border: 1px solid white;
+        outline: none;
+        text-indent: 25px;
+    }
+
+    .register-form {
+        display: grid;
+        place-items: center;
+    }
+
+    .register-modal-btn {
+        display: flex;
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: 10px 50px;
+        font-weight: bold;
+        border-radius: 30px;
+        outline: none;
+        margin-top: 2rem;
+    }
+
+    .register-modal-btn:hover {
+        background: #f50093;
+        color: white;
+        border: 1px solid bluebird;
+    }
+
+    .register-logo {
+        width: 2rem;
+        height: 2rem;
+        display: grid;
+        justify-self: center;
+    }
+
+    .register-logo-title {
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+    .register-modal {
+        background: transparent;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .register-wrapper {
         display: grid;
         width: 90vw;
         height: 75vh;
@@ -25,215 +92,7 @@
         border-radius: 15px;
     }
 
-    .email-input, .password-input {
-        width: 15rem;
-        height: 2.4rem;
-        background: rgba(255, 255, 255, 0.15);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
-        border-radius: 20px;
-        border: 1px solid white;
-        outline: none;
-        text-indent: 25px;
-    }
-
-    .login-form {
-        display: grid;
-        place-items: center;
-    }
-
-    .login-modal-btn {
-        display: flex;
-        background-color: blue;
-        color: white;
-        border: none;
-        padding: 10px 50px;
-        font-weight: bold;
-        border-radius: 30px;
-        outline: none;
-        margin-top: 2rem;
-    }
-
-    .login-modal-btn:hover {
-        background: #f50093;
-        color: white;
-        border: 1px solid bluebird;
-    }
-
-    .login-logo {
-        width: 3rem;
-        height: 3rem;
-    }
-}
-
-
-@media only screen and (min-width: 600px) {
-    .login-modal {
-        background: transparent;
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        display: grid;
-        justify-content: center;
-        align-content: center;
-
-    }
-
-    .logo-title {
-        font-size: 3rem;
-    }
-
-    .login-wrapper {
-        display: grid;
-        width: 55vw;
-        height: 55vh;
-        place-content: center;
-        background: rgba( 255, 255, 255, 0.35 );
-        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-radius: 15px;
-    }
-
-    .email-input, .password-input {
-        width: 15rem;
-        height: 2.4rem;
-        background: rgba(255, 255, 255, 0.15);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
-        border-radius: 20px;
-        border: 1px solid white;
-        outline: none;
-        text-indent: 25px;
-    }
-
-    .login-form {
-        display: grid;
-        place-items: center;
-    }
-
-    .login-modal-btn {
-        display: flex;
-        background-color: blue;
-        color: white;
-        border: none;
-        padding: 10px 50px;
-        font-weight: bold;
-        border-radius: 30px;
-        outline: none;
-        margin-top: 2rem;
-    }
-
-    .login-modal-btn:hover {
-        background: #f50093;
-        color: white;
-        border: 1px solid bluebird;
-    }
-
-    .login-logo {
-        width: 3rem;
-        height: 3rem;
-    }
-}
-
-
-
-@media only screen and (min-width: 768px) {
-    .login-modal {
-        background: transparent;
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        display: grid;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .logo-title {
-        font-size: 3rem;
-    }
-
-    .login-wrapper {
-        display: grid;
-        width: 45vw;
-        height: 50vh;
-        place-content: center;
-        background: rgba( 255, 255, 255, 0.35 );
-        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-radius: 15px;
-    }
-
-    .email-input, .password-input {
-        width: 15rem;
-        height: 2.4rem;
-        background: rgba(255, 255, 255, 0.15);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
-        border-radius: 20px;
-        border: 1px solid white;
-        outline: none;
-        text-indent: 25px;
-    }
-
-    .login-form {
-        display: grid;
-        place-items: center;
-    }
-
-    .login-modal-btn {
-        display: flex;
-        background-color: blue;
-        color: white;
-        border: none;
-        padding: 10px 50px;
-        font-weight: bold;
-        border-radius: 30px;
-        outline: none;
-        margin-top: 2rem;
-    }
-
-    .login-modal-btn:hover {
-        background: #f50093;
-        color: white;
-        border: 1px solid bluebird;
-    }
-
-    .login-logo {
-        width: 3rem;
-        height: 3rem;
-    }
-}
-
-
-
-@media only screen and (min-width: 992px) {
-    
-    .login-modal {
-        background: transparent;
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        display: grid;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .logo-title {
-        font-size: 3rem;
-    }
-
-    .login-wrapper {
-        display: grid;
-        width: 34vw;
-        height: 50vh;
-        place-content: center;
-        background: rgba( 255, 255, 255, 0.35 );
-        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-radius: 15px;
-    }
-
-    .email-input, .password-input {
+    .signup-name-input, .signup-email-input, .signup-password-input {
         width: 20rem;
         height: 2.4rem;
         background: rgba(255, 255, 255, 0.15);
@@ -244,12 +103,12 @@
         text-indent: 25px;
     }
 
-    .login-form {
+    .register-form {
         display: grid;
         place-items: center;
     }
 
-    .login-modal-btn {
+    .register-modal-btn {
         display: flex;
         background-color: blue;
         color: white;
@@ -261,23 +120,168 @@
         margin-top: 2rem;
     }
 
-    .login-modal-btn:hover {
+    .register-modal-btn:hover {
         background: #f50093;
         color: white;
         border: 1px solid bluebird;
     }
 
-    .login-logo {
+    .register-logo {
         width: 3rem;
         height: 3rem;
+        display: grid;
+        justify-self: center;
+    }
+
+    .register-logo-title {
+        text-align: center;
+        font-size: 3rem;
     }
 }
 
+@media only screen and (min-width: 768px) {
+    .register-modal {
+        background: transparent;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .register-wrapper {
+        display: grid;
+        width: 55vw;
+        height: 60vh;
+        place-content: center;
+        background: rgba( 255, 255, 255, 0.35 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 15px;
+    }
+
+    .signup-name-input, .signup-email-input, .signup-password-input {
+        width: 20rem;
+        height: 2.4rem;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+        border-radius: 20px;
+        border: 1px solid white;
+        outline: none;
+        text-indent: 25px;
+    }
+
+    .register-form {
+        display: grid;
+        place-items: center;
+    }
+
+    .register-modal-btn {
+        display: flex;
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: 10px 50px;
+        font-weight: bold;
+        border-radius: 30px;
+        outline: none;
+        margin-top: 2rem;
+    }
+
+    .register-modal-btn:hover {
+        background: #f50093;
+        color: white;
+        border: 1px solid bluebird;
+    }
+
+    .register-logo {
+        width: 3rem;
+        height: 3rem;
+        display: grid;
+        justify-self: center;
+    }
+
+    .register-logo-title {
+        text-align: center;
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .register-modal {
+        background: transparent;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .register-wrapper {
+        display: grid;
+        width: 45vw;
+        height: 60vh;
+        place-content: center;
+        background: rgba( 255, 255, 255, 0.35 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 15px;
+    }
+
+    .signup-name-input, .signup-email-input, .signup-password-input {
+        width: 20rem;
+        height: 2.4rem;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+        border-radius: 20px;
+        border: 1px solid white;
+        outline: none;
+        text-indent: 25px;
+    }
+
+    .register-form {
+        display: grid;
+        place-items: center;
+    }
+
+    .register-modal-btn {
+        display: flex;
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: 10px 50px;
+        font-weight: bold;
+        border-radius: 30px;
+        outline: none;
+        margin-top: 2rem;
+    }
+
+    .register-modal-btn:hover {
+        background: #f50093;
+        color: white;
+        border: 1px solid bluebird;
+    }
+
+    .register-logo {
+        width: 3rem;
+        height: 3rem;
+        display: grid;
+        justify-self: center;
+    }
+
+    .register-logo-title {
+        text-align: center;
+        font-size: 3rem;
+    }
+}
 
 
 @media only screen and (min-width: 1200px) {
-
-    .login-modal {
+    .register-modal {
         background: transparent;
         position: absolute;
         width: 100vw;
@@ -287,14 +291,10 @@
         align-content: center;
     }
 
-    .logo-title {
-        font-size: 3rem;
-    }
-
-    .login-wrapper {
+    .register-wrapper {
         display: grid;
         width: 34vw;
-        height: 50vh;
+        height: 60vh;
         place-content: center;
         background: rgba( 255, 255, 255, 0.35 );
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -303,7 +303,7 @@
         border-radius: 15px;
     }
 
-    .email-input, .password-input {
+    .signup-name-input, .signup-email-input, .signup-password-input {
         width: 20rem;
         height: 2.4rem;
         background: rgba(255, 255, 255, 0.15);
@@ -314,12 +314,12 @@
         text-indent: 25px;
     }
 
-    .login-form {
+    .register-form {
         display: grid;
         place-items: center;
     }
 
-    .login-modal-btn {
+    .register-modal-btn {
         display: flex;
         background-color: blue;
         color: white;
@@ -331,15 +331,22 @@
         margin-top: 2rem;
     }
 
-    .login-modal-btn:hover {
+    .register-modal-btn:hover {
         background: #f50093;
         color: white;
         border: 1px solid bluebird;
     }
 
-    .login-logo {
+    .register-logo {
         width: 3rem;
         height: 3rem;
+        display: grid;
+        justify-self: center;
+    }
+
+    .register-logo-title {
+        text-align: center;
+        font-size: 3rem;
     }
 
 }
