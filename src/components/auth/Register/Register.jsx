@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from './../../../img/logo/logo-black.svg'
 import './Register.scss'
-import axios from 'axios'
+
 
 
 export default function Register() {
@@ -22,23 +22,19 @@ export default function Register() {
         if(password !== password2){
             console.log('Password do not match')
         } else {
-            const newUser = {
-                name, email, password
-            }
+            console.log('SUCCESS');
+            // const newUser = { name, email, password}
 
-            try{
-                const config = {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                }
+            // try{ const config = {
+            //         headers: { 'Content-Type': 'application/json'}
+            // }
 
-                const body = JSON.stringify(newUser)
-                const response = await axios.post('/api/users', body, config)
-                console.log(response.data)
-            } catch(err) {
-                console.log(err.response.data)
-            }
+            //     const body = JSON.stringify(newUser)
+            //     const response = await axios.post('/api/users', body, config)
+            //     console.log(response.data)
+            // } catch(err) {
+            //     console.log(err.response.data)
+            // }
         }
     }
 
