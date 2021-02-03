@@ -32,8 +32,8 @@ export default class Navbar extends Component {
             {this.menuPopUp()}
             <nav className="navbar">
             <div className='logo-wrapper'>
-                <Link to='/'><img className="nav-logo" src={logo}/></Link>
-                <Link to='/'><img className="nav-logo-txt" src={logoText}/></Link>
+                <Link to='/'><img className="nav-logo" alt='logo' src={logo}/></Link>
+                <Link to='/'><img className="nav-logo-txt" alt='logo-text' src={logoText}/></Link>
             </div>
             <ul className="nav-list">
                 <Link to='/login'>
@@ -44,7 +44,7 @@ export default class Navbar extends Component {
                     <li><button className="signup-btn">Sign Up</button></li>
                 </Link>
             </ul>
-            <a href="#" className='menu-icon'><img className="menu-icon" onClick={this.toggleCollapse} src={menuIcon}/></a>
+            <img className="menu-icon" onClick={this.toggleCollapse} src={menuIcon}/>
             </nav>
 
             

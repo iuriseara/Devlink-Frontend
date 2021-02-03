@@ -34,8 +34,7 @@ export default function Login() {
                     placeholder="E-Mail"
                     value={email}
                     onChange={e => changeHandler(e)}
-                    required
-                    />
+                    required />
 
                     <br/>
                 
@@ -47,8 +46,7 @@ export default function Login() {
                     placeholder="Password"
                     value={password}
                     onChange={e => changeHandler(e)}
-                    required
-                    />
+                    required />
 
                     <br/>
                 
