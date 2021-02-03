@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from './../../../img/logo/logo-black.svg'
 import './Register.scss'
+import axios from 'axios'
 
 
 export default function Register() {
@@ -16,12 +17,28 @@ export default function Register() {
 
     const changeHandler = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-    const submitHandler = e => {
+    const submitHandler = async e => {
         e.preventDefault();
         if(password !== password2){
             console.log('Password do not match')
         } else {
-            console.log(formData)
+            const newUser = {
+                name, email, password
+            }
+
+            try{
+                const config = {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }
+
+                const body = JSON.stringify(newUser)
+                const response = await axios.post('/api/users', body, config)
+                console.log(response.data)
+            } catch(err) {
+                console.log(err.response.data)
+            }
         }
     }
 
