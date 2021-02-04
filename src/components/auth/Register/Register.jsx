@@ -1,11 +1,15 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import logo from './../../../img/logo/logo-black.svg'
-import './Register.scss'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import logo from './../../../img/logo/logo-black.svg';
+import './Register.scss';
+import { connect } from 'react-redux';
+import { setAlert } from '../../../actions/alert';
+import PropTypes from 'prop-types'
+import Alert from '../../layout/Alert/Alert'
 
 
 
-export default function Register() {
+const Register = ({ setAlert }) => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -20,21 +24,9 @@ export default function Register() {
     const submitHandler = async e => {
         e.preventDefault();
         if(password !== password2){
-            console.log('Password do not match')
+            setAlert('Password does not match', 'danger')
         } else {
             console.log('SUCCESS');
-            // const newUser = { name, email, password}
-
-            // try{ const config = {
-            //         headers: { 'Content-Type': 'application/json'}
-            // }
-
-            //     const body = JSON.stringify(newUser)
-            //     const response = await axios.post('/api/users', body, config)
-            //     console.log(response.data)
-            // } catch(err) {
-            //     console.log(err.response.data)
-            // }
         }
     }
 
@@ -100,7 +92,10 @@ export default function Register() {
 
                     <br/>
                
+                    <Alert />
+
                     <button type="submit" className="register-modal-btn">Register</button>
+
 
                     <p className='register-text'>Already have an account? 
                         <Link to='/login' className="signup-text"><span> Login</span></Link>
@@ -110,3 +105,9 @@ export default function Register() {
         </div>
     )
 }
+
+
+Register.prototype = {
+    setAlert: PropTypes.func.isRequired
+}
+export default connect(null, { setAlert })(Register);

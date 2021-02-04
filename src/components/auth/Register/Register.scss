@@ -28,7 +28,8 @@
     .register-wrapper {
         display: grid;
         width: 90vw;
-        height: 80vh;
+        height: fit-content;
+        padding: 1rem;
         place-content: center;
         background: rgba( 255, 255, 255, 0.35 );
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -105,7 +106,8 @@
     .register-wrapper {
         display: grid;
         width: 90vw;
-        height: 75vh;
+        height: fit-content;
+        padding: 1rem;
         place-content: center;
         background: rgba( 255, 255, 255, 0.35 );
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -181,7 +183,8 @@
     .register-wrapper {
         display: grid;
         width: 55vw;
-        height: 60vh;
+        height: fit-content;
+        padding: 1rem;
         place-content: center;
         background: rgba( 255, 255, 255, 0.35 );
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -257,7 +260,8 @@
     .register-wrapper {
         display: grid;
         width: 45vw;
-        height: 60vh;
+        height: fit-content;
+        padding: 1rem;
         place-content: center;
         background: rgba( 255, 255, 255, 0.35 );
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -334,7 +338,8 @@
     .register-wrapper {
         display: grid;
         width: 34vw;
-        height: 60vh;
+        height: fit-content;
+        padding: 2rem;
         place-content: center;
         background: rgba( 255, 255, 255, 0.35 );
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );

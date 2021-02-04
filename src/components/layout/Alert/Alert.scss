@@ -1,0 +1,49 @@
+$danger-color: #F44336;
+$success-color: #81ce54;
+
+.alert-danger {
+    color: $danger-color;
+    font-weight: bold;
+}
+
+.alert-success {
+    color: $success-color;
+    font-weight: bold;
+}
+
+@media only screen and (max-device-width: 568px) {
+    .alert {
+        margin: 0.5rem 0rem -0.8rem 0rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .alert {
+        margin: 0.5rem 0rem 0rem 0rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .alert {
+        margin: 0.5rem 0rem 0.8rem 0rem;
+    }    
+}
+
+@media only screen and (min-width: 768px) {
+    .alert {
+        margin: 0.5rem 0rem 1.2rem 0rem;
+    }    
+}
+
+
+@media only screen and (min-width: 992px) {
+    .alert {
+        margin: 0.5rem 0rem 1.2rem 0rem;
+    }    
+}
+
+@media only screen and (min-width: 1200px) {
+    .alert {
+        margin: 0.5rem 0rem 1.2rem 0rem;
+    }    
+}

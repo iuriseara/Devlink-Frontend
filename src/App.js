@@ -4,7 +4,8 @@ import Navbar from './components/layout/Navbar/Navbar'
 import Landing from './components/layout/LandingPage/Landing'
 import Login from './components/auth/Login/Login'
 import Register from './components/auth/Register/Register'
-import './App.css';
+// import Alert from './components/layout/Alert/Alert'
+import './App.css'; 
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <Fragment>
         <Navbar />
         <Route exact path="/" component={ Landing } />
-   
+         
           <Switch>
             <Route exact path="/register" component={ Register } />
             <Route exact path="/login" component={ Login } />
