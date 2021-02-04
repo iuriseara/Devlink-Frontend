@@ -4,12 +4,13 @@ import logo from './../../../img/logo/logo-black.svg';
 import './Register.scss';
 import { connect } from 'react-redux';
 import { setAlert } from '../../../actions/alert';
+import { register } from '../../../actions/auth';
 import PropTypes from 'prop-types'
 import Alert from '../../layout/Alert/Alert'
 
 
 
-const Register = ({ setAlert }) => {
+const Register = ({ setAlert, register }) => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -26,7 +27,7 @@ const Register = ({ setAlert }) => {
         if(password !== password2){
             setAlert('Password does not match', 'danger')
         } else {
-            console.log('SUCCESS');
+            register({ name, email, password });
         }
     }
 
@@ -48,8 +49,7 @@ const Register = ({ setAlert }) => {
                     placeholder="Name" 
                     className="signup-name-input"
                     value={name}
-                    onChange={e => changeHandler(e)}
-                    required   
+                    onChange={e => changeHandler(e)}   
                     />
 
                     <br/>
@@ -60,8 +60,7 @@ const Register = ({ setAlert }) => {
                     placeholder="Email" 
                     value={email}
                     onChange={e => changeHandler(e)}
-                    className="signup-email-input"
-                    required     
+                    className="signup-email-input"     
                     />
 
                     <br/>
@@ -69,12 +68,10 @@ const Register = ({ setAlert }) => {
                     <input 
                     type="password" 
                     name="password" 
-                    placeholder="Password" 
-                    minLength="6" 
+                    placeholder="Password"  
                     value={password}
                     onChange={e => changeHandler(e)}
-                    className="signup-password-input"
-                    required     
+                    className="signup-password-input"     
                     />
 
                     <br/>
@@ -82,12 +79,10 @@ const Register = ({ setAlert }) => {
                     <input 
                     type="password" 
                     name="password2" 
-                    placeholder="Confirm Password" 
-                    minLength="6" 
+                    placeholder="Confirm Password"  
                     value={password2}
                     onChange={e => changeHandler(e)}
-                    className="signup-password-input"
-                    required     
+                    className="signup-password-input"     
                     />
 
                     <br/>
@@ -108,6 +103,7 @@ const Register = ({ setAlert }) => {
 
 
 Register.prototype = {
-    setAlert: PropTypes.func.isRequired
+    setAlert: PropTypes.f,
+    register: PropTypes.f
 }
-export default connect(null, { setAlert })(Register);
+export default connect(null, { setAlert, register })(Register);
