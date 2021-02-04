@@ -1,13 +1,24 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/layout/Navbar/Navbar'
 import Landing from './components/layout/LandingPage/Landing'
 import Login from './components/auth/Login/Login'
 import Register from './components/auth/Register/Register'
-// import Alert from './components/layout/Alert/Alert'
+import { loadUser } from './actions/auth';
+import store from './store'
+import setAuthToken from './utils/setAuthToken'
 import './App.css'; 
 
-function App() {
+if(localStorage.token) {
+  setAuthToken(localStorage.token)
+}
+
+const App = () => {
+  
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []);
+
   return (
     <Router>
       <Fragment>
