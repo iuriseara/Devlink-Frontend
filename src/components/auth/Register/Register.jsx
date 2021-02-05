@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link , Redirect } from 'react-router-dom';
 import logo from './../../../img/logo/logo-black.svg';
 import './Register.scss';
 import { connect } from 'react-redux';
@@ -10,7 +10,7 @@ import Alert from '../../layout/Alert/Alert'
 
 
 
-const Register = ({ setAlert, register }) => {
+const Register = ({ setAlert, register, isAuthenticated }) => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -31,7 +31,10 @@ const Register = ({ setAlert, register }) => {
         }
     }
 
-    console.log(formData)
+    if(isAuthenticated) {
+        return <Redirect to='/dashboard' />
+    }
+
     return (
 
         <div className="register-modal">
@@ -103,7 +106,12 @@ const Register = ({ setAlert, register }) => {
 
 
 Register.prototype = {
-    setAlert: PropTypes.f,
-    register: PropTypes.f
+    setAlert: PropTypes.func.isRequired,
+    register: PropTypes.func.isRequired,
+    isAuthenticated: PropTypes.bool
 }
-export default connect(null, { setAlert, register })(Register);
+
+const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated
+})
+export default connect(mapStateToProps, { setAlert, register })(Register);

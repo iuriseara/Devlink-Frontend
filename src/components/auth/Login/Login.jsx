@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import './Login.scss'
 import logo from './../../../img/logo/logo-black.svg'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import { login } from '../../../actions/auth'
+import Alert from '../../layout/Alert/Alert'
 
-export default function Login() {
+const Login = ({ login, isAuthenticated }) => {
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -15,7 +19,11 @@ export default function Login() {
 
     const submitHandler = async e => {
         e.preventDefault();
-        console.log('SUCCESS')
+        login(email, password)
+    }
+
+    if(isAuthenticated) {
+        return <Redirect to='/dashboard' />
     }
 
     console.log(formData)
@@ -49,7 +57,9 @@ export default function Login() {
                     required />
 
                     <br/>
-                
+
+                    <Alert/>
+
                     <button type="submit" className="login-modal-btn">Login</button>
                     
                     <p className='login-text'>Don't have an account? 
@@ -60,3 +70,14 @@ export default function Login() {
         </div>
     )
 }
+
+Login.propTypes = {
+    login: PropTypes.func.isRequired,
+    isAuthenticated: PropTypes.bool,
+};
+
+const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { login })(Login)
