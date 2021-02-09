@@ -3,10 +3,18 @@ import './Landing.scss';
 import logoText from '../../../img/logo/logo-text.svg';
 import landingGfx from '../../../img/icons/landing-page-img.svg';
 import Modal from '../../auth/Login/Login'
-import { Link } from 'react-router-dom'
+import { Link, Redirect} from 'react-router-dom'
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 
-export default function Landing() {
+const Landing = ({ isAuthenticated }) => {
+
+    if (isAuthenticated) {
+        return <Redirect to='/dashboard'/>
+    }
+
+
     return (
         <div className='landing-page'>
 
@@ -26,3 +34,14 @@ export default function Landing() {
         </div>
     )
 }
+
+Landing.propTypes = {
+    isAuthenticated: PropTypes.bool
+}
+
+const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated
+
+})
+
+export default connect(mapStateToProps)(Landing);

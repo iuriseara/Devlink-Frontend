@@ -15,7 +15,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     const authLinks = (
         <ul className="nav-list">
             
+                <Link className='dashboard-btn' to='/dashboard'>Dashboard</Link>
                 <li><button onClick={logout} className="signup-btn">Logout</button></li>
+                
 
            
         </ul>

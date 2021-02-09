@@ -153,6 +153,12 @@
         display: none !important;
     }
 
+    a.dashboard-btn {
+        text-decoration: none;
+        color: black;
+        margin-right: 15px;
+    }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -247,6 +253,13 @@
         display: none !important;
     }
 
+    a.dashboard-btn {
+        text-decoration: none;
+        color: black;
+        margin-right: 15px;
+    }
+
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -298,7 +311,7 @@
         border-radius: 20px;
     }
 
-    .login-btn:focus, .signup-btn:focus {
+    .login-btn:focus, .signup-btn:focus, .dashboard-btn:focus {
         outline:none;
     }
 
@@ -327,4 +340,12 @@
     .menu-icon {
         display: none !important;
     }
+
+    a.dashboard-btn {
+        text-decoration: none;
+        color: black;
+        margin-right: 15px;
+    }
+
+    
 }

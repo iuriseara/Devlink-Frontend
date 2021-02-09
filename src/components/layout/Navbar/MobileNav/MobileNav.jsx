@@ -12,6 +12,7 @@ const MobileNav = (props, { auth: isAuthenticated, loading }, logout ) => {
 
     const authLinks = (
         <ul className="mobile-nav-list">
+            <Link to='/dashboard' onClick={props.toggle} className="dashboard-text">Dashboard</Link>
             <li><a href="#" onClick={props.logout} className="logout-btn">Logout</a></li>
             <li><a href="#" className="blog-menu-text">Blog</a></li>
             <li><a href="#" className="contact-menu-text">Contact</a></li>
