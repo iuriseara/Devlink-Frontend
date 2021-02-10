@@ -1,0 +1,60 @@
+@media only screen and (max-width: 600px) {
+
+}
+
+
+@media only screen and (min-width: 600px) {
+
+} 
+
+
+
+@media only screen and (min-width: 768px) {
+    .dashboard {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 55px;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 992px) {
+    .dashboard {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 55px;
+    }
+
+    .dashboard-header {
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 3.0px );
+        -webkit-backdrop-filter: blur( 3.0px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );  
+    }
+
+    .create-profile-btn {
+        padding: 15px 39px;
+        text-decoration: none;
+        border-radius: 50px;
+        background-color: blue;
+        color: white;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 1200px) {
+    .dashboard {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 55px;
+    }
+}

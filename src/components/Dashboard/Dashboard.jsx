@@ -1,29 +1,30 @@
 import React, { Fragment, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCurrentProfile} from '../../actions/profile';
 import Spinner from '../layout/Spinner/Spinner';
+import './Dashboard.scss';
 
 
 const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
     
     useEffect(() => {
         getCurrentProfile();
-    }, [getCurrentProfile]);
+    }, []);
 
     return (
-        <Fragment>
-          <h1 className="large text-primary">Dashboard</h1>
-          <p className="lead">
-            <i className="fas fa-user" /> Welcome {user && user.name}
-          </p>
+        <div className='dashboard'>
+            <div className='dashboard-header'>
+                <h1 className="dashboard-text">Dashboard</h1>
+                <p className="dashboard-username">Welcome {user && user.name} </p>
+            </div>
           {profile !== null ? (
             <Fragment>
               {/* <DashboardActions />
               <Experience experience={profile.experience} />
               <Education education={profile.education} /> */}
-              
-              <h1>TEST</h1>
+    
               {/* <div className="my-2">
                 <button className="btn btn-danger" onClick={() => deleteAccount()}>
                   <i className="fas fa-user-minus" /> Delete My Account
@@ -32,22 +33,23 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, load
             </Fragment>
           ) : (
             <Fragment>
-              <p>You have not yet setup a profile, please add some info</p>
-              {/* <Link to="/create-profile" className="btn btn-primary my-1">
-                Create Profile
-              </Link> */}
+              <div className="no-profile-alert">
+                  <p>You have not yet created a profile, please add some info</p>
+                  <Link to="/create-profile" className="create-profile-btn">
+                    Create Profile
+                  </Link>
+              </div>
             </Fragment>
           )}
-        </Fragment>
+        </div>
       );
-    
-}
+    };
 
 Dashboard.propTypes = {
     getCurrentProfile: PropTypes.func.isRequired,
     auth: PropTypes.object.isRequired,
     profile: PropTypes.object.isRequired
-}
+};
 
 const mapStateToProps = state => ({
     auth: state.auth,
