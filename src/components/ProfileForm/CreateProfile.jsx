@@ -7,6 +7,7 @@ import Instagram from '../../img/logo/socialmedia/instagram.svg';
 import Twitter from '../../img/logo/socialmedia/twitter.svg';
 import Youtube from '../../img/logo/socialmedia/youtube.svg';
 import Linkedin from '../../img/logo/socialmedia/linkedin.svg';
+import './CreateProfile.scss';
 
 const initialState = {
     company: '',
@@ -15,7 +16,7 @@ const initialState = {
     status: '',
     skills: '',
     githubusername: '',
-    bit: '',
+    bio: '',
     twitter: '',
     facebook: '',
     linkedin: '',
@@ -48,15 +49,17 @@ const CreateProfile = props => {
 
     const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
+
     return (
         <div className="create-profile">
-
+            <div className="create-profile-wrapper">
+            
             <h1>Edit Your Profile</h1>
             <p>Add some changes to your profile</p>
 
 
             <form className="create-profile-form">
-                <select name='status' onChange={onChange}>
+                <select name='status' onChange={onChange} className='pro-status'>
                     <option>* Select Professional Status</option>
                     <option value="Developer">Developer</option>
                     <option value="Junior Developer">Junior Developer</option>
@@ -68,11 +71,11 @@ const CreateProfile = props => {
                 <option value="Other">Other</option>
                 </select>
 
-            <br/>
+
 
             <small className="form-text">Give us an idea of where you are at in your career</small>
 
-            <br/>
+
 
           <input
             type="text"
@@ -80,13 +83,12 @@ const CreateProfile = props => {
             name="company"
             value={company}
             onChange={onChange}
+            className="company-input"
           />
 
-        <br/>
 
         <small className="form-text">Could be your own company or one you work for</small>
         
-        <br/>
 
         <input
             type="text"
@@ -94,13 +96,12 @@ const CreateProfile = props => {
             name="website"
             value={website}
             onChange={onChange}
+            className="website-input"
         />
 
-        <br/>
 
         <small className="form-text">Could be your own or a company website</small>       
 
-        <br/>
 
         <input
             type="text"
@@ -108,13 +109,12 @@ const CreateProfile = props => {
             name="location"
             value={location}
             onChange={onChange}
+            className='location-input'
         />
 
-        <br/>
 
         <small className="form-text">City & state suggested (eg. Boston, MA)</small>
 
-        <br/>
 
         <input
             type="text"
@@ -122,13 +122,12 @@ const CreateProfile = props => {
             name="skills"
             value={skills}
             onChange={onChange}
+            className='skill-input'
         />
 
-        <br/>
 
         <small className="form-text">Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)</small>
 
-        <br/>
 
         <input
             type="text"
@@ -136,22 +135,21 @@ const CreateProfile = props => {
             name="githubusername"
             value={githubusername}
             onChange={onChange}
+            className='github-input'
         />
 
-        <br/>
 
         <small className="form-text">If you want your latest repos and a Github link, include your username</small>
 
-        <br/>
 
         <textarea
             placeholder="A short bio of yourself"
             name="bio"
             value={bio}
             onChange={onChange}
+            className='bio-input'
         />
 
-        <br/>
 
         <small className="form-text">Tell us a little about yourself</small>
 
@@ -159,16 +157,16 @@ const CreateProfile = props => {
           <button
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
             type="button"
-            className="btn btn-light"
+            className="socialmedia-btn"
           >
             Add Social Network Links
           </button>
-          <span>Optional</span>
+       
         </div>
 
         {displaySocialInputs && (
           <Fragment>
-            <div className="form-group social-input">
+            <div className="social-input-group">
               <img src={Twitter} className="twitter-icon" />
               <input
                 type="text"
@@ -176,10 +174,11 @@ const CreateProfile = props => {
                 name="twitter"
                 value={twitter}
                 onChange={onChange}
+                className="twitter-input"
               />
             </div>
 
-            <div className="form-group social-input">
+            <div className="social-input-group">
               <img src={Facebook} className="facebook-icon" />
               <input
                 type="text"
@@ -187,10 +186,11 @@ const CreateProfile = props => {
                 name="facebook"
                 value={facebook}
                 onChange={onChange}
+                className="facebook-input"
               />
             </div>
 
-            <div className="form-group social-input">
+            <div className="social-input-group">
               <img src={Youtube} className="youtube-icon" />
               <input
                 type="text"
@@ -198,10 +198,11 @@ const CreateProfile = props => {
                 name="youtube"
                 value={youtube}
                 onChange={onChange}
+                className="youtube-input"
               />
             </div>
 
-            <div className="form-group social-input">
+            <div className="social-input-group">
               <img src={Linkedin} className="linkedin-icon" />
               <input
                 type="text"
@@ -209,10 +210,11 @@ const CreateProfile = props => {
                 name="linkedin"
                 value={linkedin}
                 onChange={onChange}
+                className="linkedin-input"
               />
             </div>
 
-            <div className="form-group social-input">
+            <div className="social-input-group">
               <img src={Instagram} className="instagram-icon" />
               <input
                 type="text"
@@ -220,6 +222,7 @@ const CreateProfile = props => {
                 name="instagram"
                 value={instagram}
                 onChange={onChange}
+                className="instagram-input"
               />
             </div>
           </Fragment>
@@ -231,7 +234,8 @@ const CreateProfile = props => {
 
         </form>
 
-        </div>
+         </div>
+    </div>
     );
 };
 
