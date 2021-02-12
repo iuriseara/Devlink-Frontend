@@ -57,6 +57,8 @@ const CreateProfile = props => {
             <h1>Edit Your Profile</h1>
             <p>Add some changes to your profile</p>
 
+            
+            <small className="profile-label">Give us an idea of where you are at in your career</small>
 
             <form className="create-profile-form">
                 <select name='status' onChange={onChange} className='pro-status'>
@@ -71,11 +73,7 @@ const CreateProfile = props => {
                 <option value="Other">Other</option>
                 </select>
 
-
-
-            <small className="form-text">Give us an idea of where you are at in your career</small>
-
-
+        <small className="profile-label">Could be your own company or one you work for</small>
 
           <input
             type="text"
@@ -87,7 +85,7 @@ const CreateProfile = props => {
           />
 
 
-        <small className="form-text">Could be your own company or one you work for</small>
+        <small className="profile-label">Could be your own or a company website</small>       
         
 
         <input
@@ -100,7 +98,7 @@ const CreateProfile = props => {
         />
 
 
-        <small className="form-text">Could be your own or a company website</small>       
+        <small className="profile-label">City & state suggested (eg. Boston, MA)</small>
 
 
         <input
@@ -113,7 +111,7 @@ const CreateProfile = props => {
         />
 
 
-        <small className="form-text">City & state suggested (eg. Boston, MA)</small>
+        <small className="profile-label">Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)</small>
 
 
         <input
@@ -126,7 +124,7 @@ const CreateProfile = props => {
         />
 
 
-        <small className="form-text">Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)</small>
+        <small className="profile-label">If you want your latest repos and a Github link, include your username</small>
 
 
         <input
@@ -139,7 +137,7 @@ const CreateProfile = props => {
         />
 
 
-        <small className="form-text">If you want your latest repos and a Github link, include your username</small>
+        <small className="profile-label">Tell us a little about yourself</small>
 
 
         <textarea
@@ -151,9 +149,7 @@ const CreateProfile = props => {
         />
 
 
-        <small className="form-text">Tell us a little about yourself</small>
-
-        <div className="my-2">
+        <div className="social-media-wrapper">
           <button
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
             type="button"
@@ -225,11 +221,14 @@ const CreateProfile = props => {
                 className="instagram-input"
               />
             </div>
+            <span className='spacer'></span>
           </Fragment>
         )}
 
-        <input type="submit" className="create-profile-submit-btn" />
-        <Link className="go-back-btn" to="/dashboard">Go Back</Link>
+        <div className="form-footer-wrapper">
+            <input type="submit" value='Create' className="create-profile-submit-btn" />
+            <Link className="go-back-btn" to="/dashboard" className="go-back-btn">Go Back</Link>
+        </div>
 
 
         </form>

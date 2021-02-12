@@ -27,29 +27,50 @@
 @media only screen and (min-width: 1200px) {
     .create-profile {
         width: 100vw;
-        height: 100vh;
+        height: fit-content;
         position: absolute;
         top: 55px;
+        display: grid;
+        justify-items: center;
     }
 
     .create-profile-wrapper {
-        display: grid;
-        justify-content: center;
+        width: auto;
+        height: fit-content;
+        padding: 3rem;
+        align-self: center;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 3.0px );
+        -webkit-backdrop-filter: blur( 3.0px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        margin: 3rem;
+    }
+
+    .pro-status {
+        height: 42px;
     }
 
     .pro-status, .company-input, .website-input, .location-input, .skill-input, .github-input {
         width: 100%;
-        height: 30px;
+        height: 35px;
         text-indent: 10px;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+        border-radius: 20px;
+        border: 1px solid white;
     }
 
     .bio-input {
         width: 100%;
         height: 3.5rem;
-    }
-
-    small {
-        font-size: 12px;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+        border: 1px solid white;
+        border-radius: 5px;
+        text-indent: 15px;
+        font-family: system-ui;
     }
 
     .create-profile-form {
@@ -57,21 +78,37 @@
     }
 
     .create-profile-submit-btn {
-        height: 40px;
+        width: 100%;
+        height: 50px;
         border: none;
         background-color: blue;
         color: white;
         font-weight: bold;
+        font-size: 15px;
+        border-radius: 35px
+    }
+
+    .create-profile-submit-btn:hover {
+        background-color: #f50093;
     }
 
     .socialmedia-btn {
-        width: 200px;
-        height: 33px;
-        background-color: lightgrey;
+        width: 100%;
+        height: 43px;
+        background-color: #f50093;
         border: none;
+        border-radius: 30px;
+        font-weight: bold;
         color: white;
-        /* font-weight: bold; */
     }
+
+    .socialmedia-btn:hover {
+        background-color: #9b9b9b;
+        color: white;
+        border: 1px solid #f50093;
+    }
+
+
 
     .twitter-icon, .facebook-icon, .linkedin-icon, .instagram-icon, .youtube-icon {
         width: 30px;
@@ -86,6 +123,32 @@
 
     .twitter-input, .facebook-input, .linkedin-input, .youtube-input, .instagram-input {
         width: 100%;
+        text-indent: 10px;
+    }
+
+    .profile-label {
+        font-size: 12px;
+        margin: 1rem;
+    }
+
+
+    .go-back-btn {
+        width: 100%;
+        height: 3rem;
+        color: black;
+        text-decoration: underline;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-media-wrapper {
+        margin: 2rem 0rem;
+    }
+
+    .spacer {
+        margin: 1rem;
     }
 
 }
