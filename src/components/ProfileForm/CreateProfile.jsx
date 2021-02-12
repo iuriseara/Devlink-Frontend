@@ -54,8 +54,10 @@ const CreateProfile = props => {
         <div className="create-profile">
             <div className="create-profile-wrapper">
             
-            <h1>Edit Your Profile</h1>
-            <p>Add some changes to your profile</p>
+            <div>
+                <h1 className="profile-form-title">Edit Your Profile</h1>
+                <p className="profile-form-desc">Add some changes to your profile</p>
+            </div>
 
             
             <small className="profile-label">Give us an idea of where you are at in your career</small>
