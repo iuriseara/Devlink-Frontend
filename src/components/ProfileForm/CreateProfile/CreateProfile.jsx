@@ -2,14 +2,14 @@ import React, { useState, Fragment } from 'react';
 import { Link, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Facebook from '../../img/logo/socialmedia/facebook.svg';
-import Instagram from '../../img/logo/socialmedia/instagram.svg';
-import Twitter from '../../img/logo/socialmedia/twitter.svg';
-import Youtube from '../../img/logo/socialmedia/youtube.svg';
-import Linkedin from '../../img/logo/socialmedia/linkedin.svg';
+import Facebook from '../../../img/logo/socialmedia/facebook.svg';
+import Instagram from '../../../img/logo/socialmedia/instagram.svg';
+import Twitter from '../../../img/logo/socialmedia/twitter.svg';
+import Youtube from '../../../img/logo/socialmedia/youtube.svg';
+import Linkedin from '../../../img/logo/socialmedia/linkedin.svg';
 import './CreateProfile.scss';
-import { createProfile } from '../../actions/profile'
-import Alert from '../layout/Alert/Alert'
+import { createProfile } from '../../../actions/profile'
+import Alert from '../../layout/Alert/Alert'
 
 const initialState = {
     company: '',

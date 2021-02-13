@@ -4,9 +4,10 @@ import Navbar from './components/layout/Navbar/Navbar'
 import Landing from './components/layout/LandingPage/Landing'
 import Login from './components/auth/Login/Login'
 import Register from './components/auth/Register/Register'
-import Dashboard from './components/Dashboard/Dashboard';
+import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import PrivateRoute from './components/routing/PrivateRoute';
-import CreateProfile from './components/ProfileForm/CreateProfile'
+import CreateProfile from './components/ProfileForm/CreateProfile/CreateProfile'
+import EditProfile from './components/ProfileForm/EditProfile/EditProfile'
 import { loadUser } from './actions/auth';
 import store from './store'
 import setAuthToken from './utils/setAuthToken'
@@ -33,6 +34,7 @@ const App = () => {
             <Route exact path="/login" component={ Login } />
             <PrivateRoute exact path="/dashboard" component={ Dashboard } />
             <PrivateRoute exact path="/create-profile" component={ CreateProfile } />
+            <PrivateRoute exact path="/edit-profile" component={ EditProfile } />
           </Switch>
       
       </Fragment>
