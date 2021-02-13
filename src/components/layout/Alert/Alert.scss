@@ -6,6 +6,21 @@ $success-color: #81ce54;
     font-weight: bold;
 }
 
+.alert-danger2 {
+    width: 100%;
+    height: 32px;
+    background-color: $danger-color;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    border-radius: 36px;
+}
+
+
+
 .alert-success {
     color: $success-color;
     font-weight: bold;
