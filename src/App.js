@@ -8,6 +8,7 @@ import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import PrivateRoute from './components/routing/PrivateRoute';
 import CreateProfile from './components/ProfileForm/CreateProfile/CreateProfile'
 import EditProfile from './components/ProfileForm/EditProfile/EditProfile'
+import AddExperience from './components/ProfileForm/AddExperience/AddExperience'
 import { loadUser } from './actions/auth';
 import store from './store'
 import setAuthToken from './utils/setAuthToken'
@@ -35,6 +36,7 @@ const App = () => {
             <PrivateRoute exact path="/dashboard" component={ Dashboard } />
             <PrivateRoute exact path="/create-profile" component={ CreateProfile } />
             <PrivateRoute exact path="/edit-profile" component={ EditProfile } />
+            <PrivateRoute exact path="/add-experience" component={ AddExperience } />
           </Switch>
       
       </Fragment>
