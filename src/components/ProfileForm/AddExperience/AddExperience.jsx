@@ -6,7 +6,7 @@ import { addExperience } from '../../../actions/profile';
 import './AddExperience.scss';
 import Alert from '../../layout/Alert/Alert'
 
-const AddExperience = props => {
+const AddExperience = ({ addExperience, history }) => {
 
     const [formData, setFormData] = useState({
         company: '',
@@ -40,8 +40,8 @@ const AddExperience = props => {
                 <form
                     className="create-profile-form"
                     onSubmit={e => {
-                    // e.preventDefault();
-                    // addExperience(formData, history);
+                    e.preventDefault();
+                    addExperience(formData, history);
                     }}
                 >
                     <div className="form-group">
@@ -98,6 +98,7 @@ const AddExperience = props => {
                             className="current-job-input"
                             onChange={() => {
                                 setFormData({ ...formData, current: !current });
+                                toggleDisabled(!toggleDisabled);
                             }}
                         />
                             Current Job

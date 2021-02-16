@@ -1,0 +1,123 @@
+@media only screen and (max-width: 600px) {
+
+}
+
+@media only screen and (min-width: 600px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .create-education {
+        width: 100vw;
+        height: fit-content;
+        position: absolute;
+        top: 55px;
+        display: grid;
+        justify-items: center; 
+    }
+
+    .create-education-wrapper {
+            width: auto;
+            height: fit-content;
+            padding: 3rem;
+            align-self: center;
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 3.0px );
+            -webkit-backdrop-filter: blur( 3.0px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            margin: 3rem;
+    }
+
+    .school-title-input, .degree-input, .study-input {
+        margin-bottom: 1rem;
+        width: 100%;
+        height: 35px;
+        text-indent: 10px;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+        border-radius: 20px;
+        border: 1px solid white;
+    }
+
+    .edu-submit-btn {
+        width: 100%;
+        height: 50px;
+        border: none;
+        background-color: blue;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        border-radius: 35px
+    }
+
+    .edu-submit-btn:hover {
+        background-color: #f50093;
+    }
+
+    .program-description-input {
+        width: 100%;
+        height: 3.5rem;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+        border: 1px solid white;
+        border-radius: 5px;
+        text-indent: 15px;
+        font-family: system-ui;
+        margin: 2rem 0rem;
+    }
+
+    .date-input {
+        width: 100%;
+        height: 35px;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+        border-radius: 20px;
+        border: 1px solid white;
+        text-indent: 7px;
+    }
+
+    .current-job-input{
+        width: 25px;
+        height: 25px;
+        margin-right: 10px
+    }
+
+    .current-school{
+        display: flex;
+        align-items: center;
+    }
+
+    .current-job-group {
+        padding-top: 2rem;
+    }
+
+    .from-to-date-title {
+        text-decoration: underline;
+    }
+
+    .edu-title-wrapper {
+        margin-bottom: 4rem;
+    }
+
+    .education-form-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 0; 
+    }
+
+    .school-title-input:focus, .degree-input:focus, .study-input:focus, .date-input:focus, .current-school-input:focus, .program-description-input {
+        outline: none;
+    }
+
+}
