@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { getCurrentProfile} from '../../../actions/profile';
 import Spinner from '../../layout/Spinner/Spinner';
 import DashboardActions from '../DashboardAction/DashboardAction'
+import Experience from '../Experience/Experience'
+import Education from '../Education/Education'
 import './Dashboard.scss';
 
 
@@ -23,8 +25,8 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, load
           {profile !== null ? (
             <Fragment>
               <DashboardActions />
-              {/* <Experience experience={profile.experience} />
-              <Education education={profile.education} /> */}
+              <Experience experience={profile.experience} />
+              <Education education={profile.education} />
     
               {/* <div className="my-2">
                 <button className="btn btn-danger" onClick={() => deleteAccount()}>
